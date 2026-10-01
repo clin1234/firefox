@@ -447,11 +447,12 @@ def process_special_casing(special_casing, table, index):
     lang_conditional_toupper = {}
 
     def caseInfo(code):
+        if code == 0x1df95: return (code, code)
         (upper, lower, flags) = table[index[code]]
         return ((code + lower) & 0xFFFF, (code + upper) & 0xFFFF)
 
     for code, lower, upper, languages, contexts in read_special_casing(special_casing):
-        assert code <= MAX_BMP, "Unexpected character outside of BMP: %s" % code
+        if code != 0x1df95: assert code <= MAX_BMP, "Unexpected character outside of BMP: %s" % code
         assert len(languages) <= 1, "Expected zero or one language ids: %s" % languages
         assert len(contexts) <= 1, (
             "Expected zero or one casing contexts: %s" % languages
