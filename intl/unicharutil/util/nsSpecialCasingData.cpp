@@ -9,8 +9,8 @@
 #include <stdlib.h>       // for bsearch
 #include <array>          // for std::size
 
-/* SpecialCasing-17.0.0.txt */
-/* Date: 2025-07-31, 22:11:55 GMT */
+/* SpecialCasing-18.0.0.txt */
+/* Date: 2026-05-19, 02:48:44 GMT */
 
 using mozilla::unicode::MultiCharMapping;
 
@@ -121,6 +121,7 @@ static const MultiCharMapping CaseSpecials_Upper[] = {
   { 0xfb15, {0x0544, 0x053b, 0x0000} }, // ARMENIAN SMALL LIGATURE MEN INI
   { 0xfb16, {0x054e, 0x0546, 0x0000} }, // ARMENIAN SMALL LIGATURE VEW NOW
   { 0xfb17, {0x0544, 0x053d, 0x0000} }, // ARMENIAN SMALL LIGATURE MEN XEH
+  { 0x1df95, {0x0053, 0x0053, 0x0000} }, // LATIN SMALL LIGATURE LONG S WITH DESCENDER S
 };
 
 static const MultiCharMapping CaseSpecials_Title[] = {
@@ -172,6 +173,7 @@ static const MultiCharMapping CaseSpecials_Title[] = {
   { 0xfb15, {0x0544, 0x056b, 0x0000} }, // ARMENIAN SMALL LIGATURE MEN INI
   { 0xfb16, {0x054e, 0x0576, 0x0000} }, // ARMENIAN SMALL LIGATURE VEW NOW
   { 0xfb17, {0x0544, 0x056d, 0x0000} }, // ARMENIAN SMALL LIGATURE MEN XEH
+  { 0x1df95, {0x0053, 0x0073, 0x0000} }, // LATIN SMALL LIGATURE LONG S WITH DESCENDER S
 };
 
 static int CompareMCM(const void* aKey, const void* aElement)
